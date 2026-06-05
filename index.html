@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Add 'js' class early so progressive-enhancement reveals only apply when JS runs -->
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- ===================== SEO: TITLE + META ===================== -->
+<title>Suds Sisters Cleaning LLC | Cleaning &amp; Home Organization in Ocala, FL</title>
+<meta name="description" content="Family &amp; women-owned cleaning service in Ocala, FL. Residential &amp; deep cleaning, move-in/move-out, Airbnb turnovers, office &amp; commercial cleaning, and home organization. Insured &amp; reliable — request a free quote today." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#172a45" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Suds Sisters Cleaning LLC" />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Suds Sisters Cleaning LLC | Cleaning &amp; Home Organization in Ocala, FL" />
+<meta property="og:description" content="Family &amp; women-owned, insured cleaning and home organization serving Ocala, FL &amp; surrounding areas. Spotless standards, every time." />
+<meta property="og:locale" content="en_US" />
+
+<!-- Google Fonts: Fraunces (display serif) + Figtree (body) + Caveat (script accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Figtree:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+<!-- ===================== LOCAL BUSINESS / CLEANING SERVICE SCHEMA ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CleaningService",
+  "name": "Suds Sisters Cleaning LLC",
+  "description": "Suds Sisters Cleaning LLC provides professional cleaning and home organization services with a focus on detail, care, and spotless standards every time. Family & women owned, insured, and reliable.",
+  "telephone": "+1-616-606-8213",
+  "email": "sudssisterscleaningllc@gmail.com",
+  "slogan": "Soul Sisters. Spotless Standards.",
+  "areaServed": {
+    "@type": "City",
+    "name": "Ocala",
+    "containedInPlace": { "@type": "State", "name": "Florida" }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ocala",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "knowsAbout": [
+    "Residential Cleaning", "Deep Cleaning", "Move-In / Move-Out Cleaning",
+    "Airbnb & Vacation Rental Turnovers", "Office & Commercial Cleaning",
+    "Post-Construction Cleanup", "Home Organization"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Cleaning in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deep Cleaning in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Move-In / Move-Out Cleaning in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airbnb & Vacation Rental Turnovers in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Office & Commercial Cleaning in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Post-Construction Cleanup in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Organization in Ocala, FL" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recurring Weekly, Biweekly & Monthly Cleaning in Ocala, FL" } }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/search/top?q=Suds%20Sisters%20Cleaning%20LLC",
+    "https://www.instagram.com/sudssisterscleaning/"
+  ]
+}
+</script>
+
+<style>
+/* ====================================================================
+   1. RESET + TOKENS
+   ==================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+:root {
+  /* Coastal-boho palette: navy + rose + sage + blush on warm cream */
+  --navy:#172a45;
+  --navy-2:#23395c;
+  --ink:#212c3f;          /* primary text */
+  --muted:#505b6e;        /* secondary text — darkened for AA contrast */
+  --rose:#e84d82;         /* primary accent */
+  --rose-deep:#c93a6c;
+  --coral:#f48aab;
+  --blush:#fde7ee;
+  --blush-2:#fad9e3;
+  --sage:#8fa07f;
+  --sage-deep:#6c7e5e;
+  --sage-soft:#eaf0e2;
+  --blue:#6fbfdc;
+  --blue-soft:#e4f2f8;
+  --cream:#fcf8f4;
+  --cream-2:#f6ece4;
+  --white:#ffffff;
+  --gold:#f3b740;
+
+  --shadow-sm:0 2px 12px rgba(23,42,69,.06);
+  --shadow:0 16px 44px -20px rgba(23,42,69,.24);
+  --shadow-lg:0 34px 80px -30px rgba(23,42,69,.34);
+  --ring:0 0 0 4px rgba(232,77,130,.28);
+
+  --r-sm:14px;
+  --r:20px;
+  --r-lg:28px;
+  --r-pill:999px;
+
+  --maxw:1180px;
+  --gutter:clamp(1.1rem, 4vw, 2.6rem);
+}
+
+/* Prevent any horizontal overflow site-wide */
+html, body { max-width:100%; overflow-x:hidden; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Figtree', system-ui, -apple-system, sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  position:relative;
+}
+
+/* Subtle grain overlay for premium depth (decorative, non-blocking) */
+body::before {
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img { max-width:100%; height:auto; display:block; }
+svg { display:block; }
+
+h1, h2, h3, h4 {
+  font-family:'Fraunces', Georgia, serif;
+  font-weight:600; line-height:1.12; color:var(--navy); letter-spacing:-.01em;
+}
+a { color:inherit; text-decoration:none; }
+
+/* Focus styles */
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+  outline:none; box-shadow:var(--ring); border-radius:8px;
+}
+
+/* ====================================================================
+   2. LAYOUT HELPERS
+   ==================================================================== */
+.wrap { width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); position:relative; z-index:1; }
+.section { padding-block:clamp(3.4rem, 8vw, 6.2rem); position:relative; }
+
+.eyebrow {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:'Figtree', sans-serif; font-weight:600; font-size:.74rem;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--rose-deep);
+  background:var(--blush); padding:.45rem .9rem; border-radius:var(--r-pill); margin-bottom:1rem;
+}
+.eyebrow svg { width:14px; height:14px; }
+
+.section-head { max-width:660px; }
+.section-head.center { margin-inline:auto; text-align:center; }
+.section-head h2 { font-size:clamp(1.75rem, 5.2vw, 2.8rem); }
+.section-head p { color:var(--muted); margin-top:.9rem; font-size:clamp(1rem, 2.6vw, 1.1rem); }
+
+.script { font-family:'Caveat', cursive; color:var(--rose); font-weight:700; }
+
+/* ====================================================================
+   3. BUTTONS
+   ==================================================================== */
+.btn {
+  display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+  font-family:'Figtree', sans-serif; font-weight:600; font-size:.98rem; line-height:1;
+  padding:.95rem 1.5rem; border-radius:var(--r-pill); border:2px solid transparent;
+  cursor:pointer; text-align:center; max-width:100%;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+}
+.btn svg { width:18px; height:18px; flex:none; }
+.btn:active { transform:translateY(1px); }
+
+.btn-primary {
+  background:linear-gradient(135deg,#f48aab 0%,#e84d82 55%,#cf3a6c 100%);
+  color:#fff; box-shadow:0 12px 26px -10px rgba(232,77,130,.7);
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 18px 34px -10px rgba(232,77,130,.8); }
+
+.btn-secondary { background:var(--white); color:var(--navy); border-color:rgba(23,42,69,.16); box-shadow:var(--shadow-sm); }
+.btn-secondary:hover { transform:translateY(-2px); border-color:var(--navy); }
+
+.btn-navy { background:var(--navy); color:#fff; }
+.btn-navy:hover { transform:translateY(-2px); background:var(--navy-2); }
+
+.btn-outline { background:transparent; color:#fff; border-color:rgba(255,255,255,.55); }
+.btn-outline:hover { background:rgba(255,255,255,.12); border-color:#fff; }
+
+.btn-white { background:#fff; color:var(--rose-deep); }
+.btn-white:hover { transform:translateY(-2px); background:var(--cream); }
+
+/* ====================================================================
+   4. ANNOUNCEMENT BAR
+   ==================================================================== */
+.announce {
+  background:linear-gradient(90deg,var(--navy) 0%,var(--navy-2) 100%);
+  color:#f3e7ed; font-size:.82rem; text-align:center; padding:.55rem var(--gutter); position:relative; z-index:2;
+}
+.announce span { display:inline-flex; align-items:center; gap:.5rem; flex-wrap:wrap; justify-content:center; }
+.announce svg { width:14px; height:14px; color:var(--coral); }
+
+/* ====================================================================
+   5. HEADER / NAV
+   ==================================================================== */
+.site-header {
+  position:sticky; top:0; z-index:100;
+  background:rgba(252,248,244,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;
+  transition:box-shadow .25s ease, border-color .25s ease, background .25s ease;
+}
+.site-header.scrolled {
+  box-shadow:0 6px 24px -16px rgba(23,42,69,.4);
+  border-color:rgba(23,42,69,.07); background:rgba(252,248,244,.95);
+}
+.nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.7rem; }
+
+.brand { display:inline-flex; align-items:center; gap:.65rem; min-width:0; }
+.brand-mark {
+  width:42px; height:42px; flex:none; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff 0 40%,var(--blush) 100%);
+  border:2px solid var(--rose); display:grid; place-items:center; box-shadow:var(--shadow-sm);
+}
+.brand-mark svg { width:26px; height:26px; }
+.brand-name { line-height:1.05; min-width:0; }
+.brand-name b { font-family:'Fraunces',serif; font-weight:600; font-size:1.12rem; color:var(--navy); display:block; letter-spacing:-.01em; }
+.brand-name small { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-deep); font-weight:600; }
+
+.nav-links { display:flex; align-items:center; gap:.3rem; list-style:none; }
+.nav-links a { font-size:.92rem; font-weight:500; color:var(--ink); padding:.5rem .7rem; border-radius:var(--r-pill); transition:background .15s ease, color .15s ease; }
+.nav-links a:hover { background:var(--blush); color:var(--rose-deep); }
+
+.nav-cta { display:flex; align-items:center; gap:.7rem; }
+.nav-phone { display:inline-flex; align-items:center; gap:.4rem; font-weight:600; font-size:.92rem; color:var(--navy); white-space:nowrap; }
+.nav-phone svg { width:16px; height:16px; color:var(--rose); }
+
+.hamburger { display:none; width:46px; height:46px; border:1px solid rgba(23,42,69,.14); background:var(--white); border-radius:12px; cursor:pointer; position:relative; }
+.hamburger span, .hamburger span::before, .hamburger span::after {
+  content:""; position:absolute; left:50%; top:50%; width:20px; height:2px; background:var(--navy);
+  transform:translate(-50%,-50%); border-radius:2px; transition:transform .25s ease, opacity .2s ease;
+}
+.hamburger span::before { transform:translate(-50%,-8px); }
+.hamburger span::after  { transform:translate(-50%,8px); }
+.hamburger[aria-expanded="true"] span { background:transparent; }
+.hamburger[aria-expanded="true"] span::before { transform:translate(-50%,0) rotate(45deg); }
+.hamburger[aria-expanded="true"] span::after  { transform:translate(-50%,0) rotate(-45deg); }
+
+.mobile-panel { display:none; border-top:1px solid rgba(23,42,69,.08); background:var(--cream); }
+.mobile-panel ul { list-style:none; padding:.6rem var(--gutter) 1.1rem; }
+.mobile-panel a.m-link-row { display:block; padding:.85rem .4rem; font-weight:500; border-bottom:1px solid rgba(23,42,69,.06); }
+.mobile-panel .btn { width:100%; margin-top:.9rem; }
+.mobile-panel .m-phone { display:flex; align-items:center; justify-content:center; gap:.5rem; margin-top:.8rem; font-weight:600; color:var(--navy); }
+.mobile-panel .m-phone svg { width:16px; height:16px; color:var(--rose); }
+
+/* ====================================================================
+   6. DECORATIVE BLOBS / BUBBLES (clipped by body overflow:hidden)
+   ==================================================================== */
+.blob { position:absolute; border-radius:50%; filter:blur(60px); opacity:.5; z-index:0; pointer-events:none; }
+
+/* ====================================================================
+   7. HERO
+   ==================================================================== */
+.hero {
+  position:relative; overflow:hidden; padding-block:clamp(2.6rem, 7vw, 5.2rem);
+  background:
+    radial-gradient(1200px 520px at 82% -10%, var(--blush) 0%, transparent 60%),
+    radial-gradient(900px 520px at 0% 110%, var(--blue-soft) 0%, transparent 55%),
+    var(--cream);
+}
+.hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(2rem,5vw,4rem); align-items:center; position:relative; z-index:2; }
+.hero-copy { min-width:0; }
+.hero h1 { font-size:clamp(2.1rem, 7vw, 3.7rem); font-weight:700; }
+.hero h1 .hl { color:var(--rose); }
+.hero .lead { margin-top:1.1rem; font-size:clamp(1.02rem, 2.7vw, 1.18rem); color:var(--muted); max-width:42ch; }
+.hero-cta { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.8rem; }
+.hero-badges { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.6rem; }
+.badge {
+  display:inline-flex; align-items:center; gap:.45rem; background:var(--white);
+  border:1px solid rgba(23,42,69,.08); padding:.5rem .85rem; border-radius:var(--r-pill);
+  font-size:.82rem; font-weight:500; box-shadow:var(--shadow-sm); max-width:100%;
+}
+.badge svg { width:16px; height:16px; flex:none; }
+.badge.b-rose svg { color:var(--rose); }
+.badge.b-sage svg { color:var(--sage-deep); }
+.badge.b-blue svg { color:var(--blue); }
+
+/* Hero visual — single framed scene + ONE contained overlay chip (no negative offsets) */
+.hero-visual { position:relative; min-width:0; }
+.hero-card {
+  position:relative; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-lg);
+  aspect-ratio:4/4.3; background:linear-gradient(160deg,#fff 0%,var(--blush) 55%,var(--blue-soft) 100%);
+}
+.hero-scene { position:absolute; inset:0; width:100%; height:100%; }
+/* Overlay chip kept fully inside the column (positive offsets only) */
+.hero-chip {
+  position:absolute; left:14px; bottom:14px; z-index:3; max-width:calc(100% - 28px);
+  display:inline-flex; align-items:center; gap:.6rem;
+  background:rgba(255,255,255,.94); backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.85); padding:.7rem .9rem; border-radius:16px; box-shadow:var(--shadow);
+}
+.hero-chip .ic { width:34px; height:34px; flex:none; border-radius:10px; display:grid; place-items:center; background:var(--blush); color:var(--rose-deep); }
+.hero-chip .ic svg { width:20px; height:20px; }
+.hero-chip b { display:block; font-family:'Fraunces',serif; font-size:.95rem; color:var(--navy); line-height:1.1; }
+.hero-chip small { color:var(--muted); font-size:.76rem; }
+
+/* ====================================================================
+   8. TRUST STRIP
+   ==================================================================== */
+.trust-strip { background:var(--navy); color:#e9eef6; }
+.trust-row { display:flex; flex-wrap:wrap; justify-content:center; gap:clamp(1rem,4vw,3rem); padding-block:1.4rem; }
+.trust-item { display:inline-flex; align-items:center; gap:.55rem; font-size:.88rem; font-weight:500; }
+.trust-item svg { width:18px; height:18px; color:var(--coral); flex:none; }
+
+/* ====================================================================
+   9. INTRO (Problem + Solution consolidated)
+   ==================================================================== */
+.intro { background:var(--cream); overflow:hidden; }
+.intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.8rem,5vw,3.6rem); align-items:center; }
+.intro-copy .desc { color:var(--ink); font-size:1.02rem; margin-top:1rem; }
+.intro-copy .pull { margin-top:1.1rem; font-size:1.6rem; line-height:1.2; }
+.intro-card { background:var(--white); border-radius:var(--r-lg); padding:clamp(1.4rem,4vw,2.2rem); box-shadow:var(--shadow); border:1px solid rgba(23,42,69,.06); }
+.intro-card h3 { font-size:1.2rem; margin-bottom:1rem; }
+.sol-list { list-style:none; display:grid; gap:.72rem; }
+.sol-list li { display:flex; gap:.7rem; align-items:flex-start; font-size:.96rem; }
+.sol-list .chk { width:24px; height:24px; flex:none; border-radius:50%; background:linear-gradient(135deg,var(--coral),var(--rose)); display:grid; place-items:center; margin-top:1px; }
+.sol-list .chk svg { width:14px; height:14px; color:#fff; }
+
+/* ====================================================================
+   10. SERVICES
+   ==================================================================== */
+.services { background:var(--cream-2); }
+.services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:1.1rem; margin-top:2.4rem; }
+.svc {
+  position:relative; background:var(--white); border:1px solid rgba(23,42,69,.07); border-radius:var(--r);
+  padding:1.5rem; box-shadow:var(--shadow-sm); overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.svc::after { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--coral),var(--rose)); transform:scaleX(0); transform-origin:left; transition:transform .25s ease; }
+.svc:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:transparent; }
+.svc:hover::after { transform:scaleX(1); }
+.svc .ico { width:50px; height:50px; border-radius:14px; display:grid; place-items:center; margin-bottom:1rem; background:var(--blush); color:var(--rose-deep); }
+.svc.org .ico { background:var(--sage-soft); color:var(--sage-deep); }
+.svc .ico svg { width:26px; height:26px; }
+.svc h3 { font-size:1.12rem; margin-bottom:.4rem; }
+.svc p { font-size:.9rem; color:var(--muted); }
+.svc .tag { display:inline-block; margin-top:.85rem; font-size:.68rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--rose-deep); background:var(--blush); padding:.25rem .6rem; border-radius:var(--r-pill); }
+.svc.org .tag { color:var(--sage-deep); background:var(--sage-soft); }
+
+/* ====================================================================
+   11. WHY US
+   ==================================================================== */
+.why { background:var(--cream); }
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:1.1rem; margin-top:2.4rem; }
+.benefit { background:var(--white); border:1px solid rgba(23,42,69,.07); border-radius:var(--r); padding:1.4rem; box-shadow:var(--shadow-sm); display:flex; gap:1rem; align-items:flex-start; }
+.benefit .ico { width:46px; height:46px; flex:none; border-radius:12px; display:grid; place-items:center; background:var(--blue-soft); color:var(--blue); }
+.benefit:nth-child(2n) .ico { background:var(--blush); color:var(--rose-deep); }
+.benefit:nth-child(3n) .ico { background:var(--sage-soft); color:var(--sage-deep); }
+.benefit .ico svg { width:24px; height:24px; }
+.benefit h3 { font-size:1.04rem; margin-bottom:.25rem; }
+.benefit p { font-size:.9rem; color:var(--muted); }
+
+/* ====================================================================
+   12. HOW IT WORKS
+   ==================================================================== */
+.how { background:linear-gradient(180deg,var(--navy) 0%,#11203a 100%); color:#eaf0f8; overflow:hidden; position:relative; }
+.how .section-head h2 { color:#fff; }
+.how .section-head p { color:#b9c4d6; }
+.how .eyebrow { background:rgba(244,138,171,.18); color:var(--coral); }
+.steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:1.4rem; margin-top:2.6rem; }
+.step { position:relative; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:var(--r); padding:1.8rem 1.5rem 1.6rem; backdrop-filter:blur(4px); }
+.step .num { width:52px; height:52px; border-radius:50%; display:grid; place-items:center; margin-bottom:1rem; font-family:'Fraunces',serif; font-weight:600; font-size:1.4rem; color:#fff; background:linear-gradient(135deg,var(--coral),var(--rose)); box-shadow:0 10px 22px -8px rgba(232,77,130,.6); }
+.step h3 { color:#fff; font-size:1.18rem; margin-bottom:.45rem; }
+.step p { color:#c3cddc; font-size:.92rem; }
+
+/* ====================================================================
+   13. BEFORE / AFTER (interactive slider)
+   ==================================================================== */
+.beforeafter { background:radial-gradient(600px 360px at 0% 100%, var(--blush) 0, transparent 60%), var(--cream-2); overflow:hidden; }
+.ba-wrap { margin-top:2.4rem; max-width:880px; margin-inline:auto; }
+.ba {
+  position:relative; width:100%; aspect-ratio:16/10; border-radius:var(--r-lg); overflow:hidden;
+  box-shadow:var(--shadow-lg); border:6px solid #fff; background:#dfe9ef; user-select:none; touch-action:pan-y;
+}
+.ba-pane { position:absolute; inset:0; width:100%; height:100%; }
+.ba-pane svg { width:100%; height:100%; display:block; }
+.ba-after { z-index:1; }
+.ba-before { z-index:2; clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0); }
+.ba-label {
+  position:absolute; top:.8rem; z-index:4; font-size:.7rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  padding:.32rem .7rem; border-radius:var(--r-pill); color:#fff;
+}
+.ba-label.before { left:.8rem; background:rgba(23,42,69,.82); }
+.ba-label.after  { right:.8rem; background:var(--rose); }
+/* Divider + handle */
+.ba-divider { position:absolute; top:0; bottom:0; left:var(--pos,50%); width:3px; background:#fff; transform:translateX(-50%); z-index:3; box-shadow:0 0 0 1px rgba(23,42,69,.12); pointer-events:none; }
+.ba-handle {
+  position:absolute; top:50%; left:var(--pos,50%); transform:translate(-50%,-50%); z-index:4;
+  width:46px; height:46px; border-radius:50%; background:#fff; box-shadow:var(--shadow); display:grid; place-items:center; pointer-events:none;
+}
+.ba-handle svg { width:24px; height:24px; color:var(--rose); }
+/* Transparent range input drives the slider (keyboard + drag accessible) */
+.ba-range { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; z-index:5; }
+.ba-hint { text-align:center; margin-top:1rem; color:var(--muted); font-size:.94rem; }
+.ba-note { display:inline-flex; align-items:center; gap:.4rem; margin-top:.7rem; font-size:.78rem; color:var(--rose-deep); background:var(--blush); padding:.4rem .85rem; border-radius:var(--r-pill); }
+.ba-note svg { width:14px; height:14px; }
+.ba-center { text-align:center; }
+
+/* ====================================================================
+   14. REVIEWS
+   ==================================================================== */
+.reviews { background:var(--cream); }
+.review-banner {
+  display:flex; align-items:center; gap:.55rem; flex-wrap:wrap; justify-content:center; margin:1.4rem auto 0;
+  background:var(--sage-soft); color:var(--sage-deep); border:1px dashed var(--sage);
+  padding:.65rem 1.1rem; border-radius:var(--r-pill); font-size:.82rem; font-weight:600; max-width:100%;
+}
+.review-banner svg { width:16px; height:16px; flex:none; }
+.reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); gap:1.2rem; margin-top:2rem; }
+.review { background:var(--white); border:1px solid rgba(23,42,69,.07); border-radius:var(--r); padding:1.6rem; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; }
+.stars { display:flex; gap:3px; margin-bottom:.8rem; color:var(--gold); }
+.stars svg { width:18px; height:18px; }
+.review p { font-size:.96rem; color:var(--ink); font-style:italic; flex:1; }
+.review .who { display:flex; align-items:center; gap:.7rem; margin-top:1.1rem; padding-top:1.1rem; border-top:1px solid rgba(23,42,69,.07); }
+.review .avatar { width:40px; height:40px; border-radius:50%; flex:none; display:grid; place-items:center; color:#fff; font-weight:600; background:linear-gradient(135deg,var(--coral),var(--rose)); font-family:'Fraunces',serif; }
+.review .who b { display:block; font-size:.9rem; color:var(--navy); }
+.review .who small { color:var(--muted); font-size:.8rem; }
+
+/* ====================================================================
+   15. FAQ
+   ==================================================================== */
+.faq { background:var(--cream-2); }
+.faq-list { max-width:800px; margin:2.2rem auto 0; display:grid; gap:.8rem; }
+.faq-item { background:var(--white); border:1px solid rgba(23,42,69,.08); border-radius:var(--r-sm); overflow:hidden; box-shadow:var(--shadow-sm); }
+.faq-q { width:100%; text-align:left; display:flex; align-items:center; justify-content:space-between; gap:1rem; background:none; border:none; cursor:pointer; padding:1.15rem 1.3rem; font-family:'Figtree',sans-serif; font-weight:600; font-size:1rem; color:var(--navy); }
+.faq-q .chev { width:30px; height:30px; flex:none; border-radius:50%; display:grid; place-items:center; background:var(--blush); color:var(--rose-deep); transition:transform .25s ease; }
+.faq-q .chev svg { width:16px; height:16px; }
+.faq-item.open .faq-q .chev { transform:rotate(180deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+.faq-a-inner { padding:0 1.3rem 1.2rem; color:var(--muted); font-size:.94rem; overflow-wrap:anywhere; }
+
+/* ====================================================================
+   16. CONTACT / QUOTE
+   ==================================================================== */
+.contact { background:var(--cream); }
+.contact-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(1.6rem,4vw,3rem); margin-top:2.4rem; align-items:start; }
+.contact-info { min-width:0; }
+.info-card { background:linear-gradient(160deg,var(--navy) 0%,#122039 100%); color:#e9eef6; border-radius:var(--r-lg); padding:clamp(1.5rem,4vw,2.2rem); box-shadow:var(--shadow); }
+.info-card h3 { color:#fff; font-size:1.4rem; }
+.info-card .sub { color:#b9c4d6; font-size:.94rem; margin-top:.5rem; margin-bottom:1.4rem; }
+.info-row { display:flex; gap:.9rem; align-items:flex-start; padding:.85rem 0; border-bottom:1px solid rgba(255,255,255,.1); min-width:0; }
+.info-row:last-of-type { border-bottom:none; }
+.info-row .ico { width:40px; height:40px; flex:none; border-radius:11px; display:grid; place-items:center; background:rgba(244,138,171,.18); color:var(--coral); }
+.info-row .ico svg { width:20px; height:20px; }
+.info-row .meta { min-width:0; }
+.info-row .meta small { display:block; color:#9fabbe; font-size:.74rem; text-transform:uppercase; letter-spacing:.1em; }
+.info-row .meta a, .info-row .meta span { color:#fff; font-weight:500; font-size:.96rem; overflow-wrap:anywhere; word-break:break-word; }
+.info-row .meta a:hover { color:var(--coral); }
+.social-row { display:flex; gap:.6rem; margin-top:1.3rem; }
+.social-row a { width:44px; height:44px; border-radius:12px; flex:none; display:grid; place-items:center; background:rgba(255,255,255,.1); color:#fff; transition:background .18s ease, transform .18s ease; }
+.social-row a:hover { background:var(--rose); transform:translateY(-2px); }
+.social-row a svg { width:20px; height:20px; }
+
+.form-card { background:var(--white); border:1px solid rgba(23,42,69,.07); border-radius:var(--r-lg); padding:clamp(1.4rem,4vw,2.2rem); box-shadow:var(--shadow); }
+.form-card h3 { font-size:1.4rem; }
+.form-card .form-sub { color:var(--muted); font-size:.92rem; margin-top:.4rem; margin-bottom:1.4rem; }
+.field { margin-bottom:1.05rem; }
+.field label { display:block; font-size:.82rem; font-weight:600; color:var(--navy); margin-bottom:.4rem; }
+.field input, .field select, .field textarea {
+  width:100%; max-width:100%; font-family:'Figtree',sans-serif; font-size:.95rem; color:var(--ink);
+  padding:.8rem .95rem; border:1.5px solid rgba(23,42,69,.14); border-radius:12px; background:var(--cream);
+  transition:border-color .15s ease, background .15s ease;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color:var(--rose); background:#fff; }
+.field textarea { resize:vertical; min-height:110px; }
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:1.05rem; }
+.form-card .btn { width:100%; margin-top:.3rem; }
+.form-note { display:flex; align-items:center; gap:.5rem; justify-content:center; margin-top:1rem; font-size:.8rem; color:var(--muted); }
+.form-note svg { width:15px; height:15px; color:var(--sage-deep); flex:none; }
+.form-msg { display:none; margin-top:1rem; padding:1rem 1.1rem; border-radius:12px; font-size:.9rem; font-weight:500; align-items:center; gap:.6rem; }
+.form-msg.show { display:flex; }
+.form-msg svg { width:20px; height:20px; flex:none; }
+.form-msg.ok { background:var(--sage-soft); border:1px solid var(--sage); color:var(--sage-deep); }
+.form-msg.err { background:var(--blush); border:1px solid var(--coral); color:var(--rose-deep); }
+
+/* ====================================================================
+   17. FINAL CTA
+   ==================================================================== */
+.final { background:radial-gradient(700px 400px at 80% 0%, rgba(244,138,171,.35) 0, transparent 60%), linear-gradient(135deg,#e84d82 0%,#cf3a6c 100%); color:#fff; text-align:center; overflow:hidden; }
+.final h2 { color:#fff; font-size:clamp(1.85rem,6vw,3rem); max-width:18ch; margin-inline:auto; }
+.final p { color:rgba(255,255,255,.92); margin-top:1rem; font-size:1.05rem; }
+.final-cta { display:flex; flex-wrap:wrap; gap:.8rem; justify-content:center; margin-top:2rem; }
+
+/* ====================================================================
+   18. FOOTER
+   ==================================================================== */
+.footer { background:var(--navy); color:#c3cddc; padding-block:clamp(2.6rem,6vw,4rem) 1.5rem; }
+.footer-grid { display:grid; grid-template-columns:1.4fr 1fr 1.3fr; gap:clamp(1.6rem,4vw,3rem); }
+.footer .brand-name b { color:#fff; }
+.footer-about p { font-size:.9rem; margin-top:1rem; color:#aab6c8; max-width:38ch; }
+.footer-badges { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.1rem; }
+.footer-badges span { font-size:.74rem; font-weight:500; background:rgba(255,255,255,.08); color:#d6deea; padding:.35rem .7rem; border-radius:var(--r-pill); }
+.footer h4 { color:#fff; font-family:'Figtree',sans-serif; font-weight:600; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; margin-bottom:1rem; }
+.footer-links { list-style:none; display:grid; gap:.6rem; }
+.footer-links a { font-size:.92rem; color:#aab6c8; transition:color .15s ease; }
+.footer-links a:hover { color:var(--coral); }
+.footer-contact { display:grid; gap:.75rem; }
+.footer-contact a, .footer-contact span { display:flex; gap:.55rem; align-items:flex-start; font-size:.92rem; color:#c3cddc; overflow-wrap:anywhere; }
+.footer-contact svg { width:17px; height:17px; color:var(--coral); flex:none; margin-top:3px; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.1); margin-top:2.4rem; padding-top:1.4rem; display:flex; flex-wrap:wrap; gap:.6rem; justify-content:space-between; align-items:center; font-size:.82rem; color:#8b98ac; }
+.footer-bottom .preview-note { font-size:.76rem; background:rgba(255,255,255,.06); padding:.3rem .7rem; border-radius:var(--r-pill); }
+
+/* ====================================================================
+   19. MOBILE STICKY CALL/QUOTE BAR
+   ==================================================================== */
+.mobile-cta {
+  display:none; position:fixed; left:0; right:0; bottom:0; z-index:95;
+  gap:.6rem; padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom,0px));
+  background:rgba(252,248,244,.96); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 -8px 28px -14px rgba(23,42,69,.4); border-top:1px solid rgba(23,42,69,.08);
+}
+.mobile-cta .btn { flex:1 1 0; padding:.85rem .6rem; font-size:.95rem; min-width:0; }
+
+/* ====================================================================
+   20. REVEAL (progressive enhancement only)
+   ==================================================================== */
+.js .reveal { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity:1 !important; transform:none !important; }
+  html { scroll-behavior:auto; }
+}
+
+/* ====================================================================
+   21. RESPONSIVE BREAKPOINTS
+   ==================================================================== */
+@media (max-width:980px) {
+  .hero-grid { grid-template-columns:1fr; }
+  .hero-visual { order:-1; max-width:460px; margin-inline:auto; width:100%; }
+  .intro-grid { grid-template-columns:1fr; }
+  .contact-grid { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:860px) {
+  .nav-links { display:none; }
+  .nav-cta .btn, .nav-cta .nav-phone { display:none; }
+  .hamburger { display:block; }
+  .mobile-panel.open { display:block; }
+  .mobile-cta { display:flex; }       /* show sticky bar on mobile */
+  body { padding-bottom:78px; }        /* room for sticky bar */
+}
+@media (max-width:560px) {
+  .hero-cta .btn, .final-cta .btn { width:100%; }
+  .field-row { grid-template-columns:1fr; }
+  .footer-grid { grid-template-columns:1fr; }
+  .intro-copy .pull { font-size:1.4rem; }
+  /* On small screens, drop the hero overlay chip into static flow — zero clip risk */
+  .hero-chip { position:static; max-width:100%; margin-top:.9rem; }
+}
+@media (max-width:380px) { :root { --gutter:1rem; } }
+</style>
+</head>
+
+<body>
+
+<!-- ===================== 1. ANNOUNCEMENT BAR ===================== -->
+<div class="announce" role="note">
+  <span>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg>
+    Family &amp; women owned cleaning service in Ocala, FL — insured, reliable &amp; detail-focused.
+  </span>
+</div>
+
+<!-- ===================== 2. HEADER / NAV ===================== -->
+<header class="site-header" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Suds Sisters Cleaning LLC — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M9 27c0-6 1.5-11 4-13" stroke="#172a45" stroke-width="2" stroke-linecap="round"/>
+          <path d="M13 14c-3-2-6-1.5-8 .5 2.5.5 4 1.5 5 3M13 14c-1-3 .5-6 3-7-.5 2.5 0 4.5 1 6M13 14c3-2 6-1.5 8 .5-2.5.5-4 1.5-5 3" stroke="#e84d82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="24" cy="11" r="3" stroke="#6fbfdc" stroke-width="2"/>
+        </svg>
+      </span>
+      <span class="brand-name"><b>Suds Sisters</b><small>Cleaning LLC</small></span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+16166068213">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>
+        (616) 606-8213
+      </a>
+      <a class="btn btn-primary" href="#contact">Request a Quote</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div class="mobile-panel" id="mobilePanel">
+    <ul>
+      <li><a href="#top" class="m-link-row m-link">Home</a></li>
+      <li><a href="#services" class="m-link-row m-link">Services</a></li>
+      <li><a href="#why" class="m-link-row m-link">Why Us</a></li>
+      <li><a href="#reviews" class="m-link-row m-link">Reviews</a></li>
+      <li><a href="#faq" class="m-link-row m-link">FAQ</a></li>
+      <li><a href="#contact" class="m-link-row m-link">Contact</a></li>
+      <a class="btn btn-primary m-link" href="#contact">Request a Quote</a>
+      <a class="m-phone m-link" href="tel:+16166068213">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>
+        Call (616) 606-8213
+      </a>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ===================== 3. HERO ===================== -->
+<section class="hero" aria-labelledby="hero-title">
+  <span class="blob" style="width:300px;height:300px;background:var(--coral);top:-60px;right:-40px;"></span>
+  <span class="blob" style="width:260px;height:260px;background:var(--blue);bottom:-80px;left:-60px;opacity:.35;"></span>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg>
+        Cleaning &amp; Home Organization · Ocala, FL
+      </span>
+      <h1 id="hero-title">Spotless Cleaning &amp; <span class="hl">Home Organization</span> in Ocala, FL</h1>
+      <p class="lead">Reclaim your weekends. From deep cleans and rental turnovers to organized pantries and closets, Suds Sisters handles every detail — so you come home to spotless and stay there.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#contact">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg>
+          Request a Free Quote
+        </a>
+        <a class="btn btn-secondary" href="tel:+16166068213">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>
+          Call (616) 606-8213
+        </a>
+      </div>
+
+      <div class="hero-badges">
+        <span class="badge b-rose">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.3-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.7-7 10-7 10z"/></svg>
+          Family &amp; Women Owned
+        </span>
+        <span class="badge b-blue">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3zm-1 13l5-5-1.4-1.4L11 12.2 9.4 10.6 8 12l3 3z"/></svg>
+          Insured &amp; Reliable
+        </span>
+        <span class="badge b-sage">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg>
+          Serving Ocala &amp; Surrounding Areas
+        </span>
+      </div>
+    </div>
+
+    <!-- Hero visual: bright coastal interior + ONE contained overlay chip -->
+    <div class="hero-visual reveal">
+      <div class="hero-card">
+        <svg class="hero-scene" viewBox="0 0 460 500" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Illustration of a bright, freshly cleaned coastal home — a sunlit window over the sea, a healthy plant, a spray bottle, and sparkles representing Suds Sisters Cleaning LLC.">
+          <defs>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dff1f8"/><stop offset="1" stop-color="#bfe3f0"/></linearGradient>
+            <radialGradient id="sun" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#ffe9bf"/><stop offset="1" stop-color="#ffd6c2" stop-opacity="0"/></radialGradient>
+            <linearGradient id="pot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3a9b9"/><stop offset="1" stop-color="#e07e92"/></linearGradient>
+            <linearGradient id="bottle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe3f0"/><stop offset="1" stop-color="#8fd0e6"/></linearGradient>
+          </defs>
+
+          <!-- wall + light wash -->
+          <rect x="20" y="24" width="420" height="452" rx="18" fill="#fffdfb"/>
+          <rect x="20" y="24" width="420" height="452" rx="18" fill="url(#sun)" opacity=".5"/>
+
+          <!-- window with sea view -->
+          <rect x="70" y="64" width="220" height="210" rx="12" fill="url(#sea)" stroke="#172a45" stroke-width="5"/>
+          <circle cx="225" cy="120" r="26" fill="#ffe7b0"/>
+          <path d="M70 210 C120 196 150 224 200 210 C240 199 270 222 290 210 L290 270 L70 270 Z" fill="#7fc6df"/>
+          <path d="M70 232 C120 220 150 246 200 232 C240 222 270 244 290 232 L290 274 L70 274 Z" fill="#5cb2d2" opacity=".7"/>
+          <line x1="180" y1="64" x2="180" y2="274" stroke="#172a45" stroke-width="4"/>
+          <line x1="70" y1="169" x2="290" y2="169" stroke="#172a45" stroke-width="4"/>
+
+          <!-- windowsill / counter -->
+          <rect x="48" y="300" width="364" height="16" rx="6" fill="#eadfd4"/>
+          <rect x="48" y="316" width="364" height="120" fill="#f3e9df"/>
+
+          <!-- potted palm plant -->
+          <g>
+            <path d="M360 300 C360 270 360 250 376 232" stroke="#6c7e5e" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <g stroke="#8fa07f" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M376 232 C352 214 330 218 316 236 c18 -2 32 4 42 16"/>
+              <path d="M376 232 C360 202 366 176 388 162 c-6 20 -2 36 6 50"/>
+              <path d="M376 232 C400 214 422 220 434 240 c-20 -4 -36 2 -48 14"/>
+            </g>
+            <path d="M348 300 h56 l-8 40 h-40 z" fill="url(#pot)"/>
+          </g>
+
+          <!-- spray bottle (cleaning nod) -->
+          <g>
+            <rect x="92" y="344" width="54" height="74" rx="10" fill="url(#bottle)" stroke="#172a45" stroke-width="3"/>
+            <rect x="104" y="322" width="22" height="26" rx="4" fill="#eef6fa" stroke="#172a45" stroke-width="3"/>
+            <path d="M126 330 h26 l-10 12 h-16 z" fill="#172a45"/>
+            <rect x="100" y="372" width="38" height="26" rx="5" fill="#fff" opacity=".75"/>
+          </g>
+
+          <!-- sparkles + bubbles -->
+          <g fill="#e84d82">
+            <path d="M312 96l4 11 11 4-11 4-4 11-4-11-11-4 11-4 4-11z"/>
+            <path d="M150 300l3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8z" fill="#6fbfdc"/>
+            <path d="M396 120l3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8z" fill="#f3b740"/>
+          </g>
+          <circle cx="300" cy="250" r="14" fill="#fff" opacity=".7" stroke="#6fbfdc" stroke-width="2"/>
+          <circle cx="330" cy="280" r="9" fill="#fff" opacity=".7" stroke="#e84d82" stroke-width="2"/>
+        </svg>
+
+        <!-- Contained overlay chip (positive offsets only; goes static on mobile) -->
+        <div class="hero-chip">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l3 5 5.5.8-4 4 1 5.5L12 19l-5.5 2.3 1-5.5-4-4L9 6l3-5z"/></svg></span>
+          <span><b>Spotless standards</b><small>Detail-focused, every visit</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. TRUST STRIP ===================== -->
+<section class="trust-strip" aria-label="Why people trust Suds Sisters Cleaning">
+  <div class="wrap trust-row">
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg> Insured &amp; Reliable</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.3-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.7-7 10-7 10z"/></svg> Made With Care</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg> Eco-Friendly Products</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l3 5 5.5.8-4 4 1 5.5L12 19l-5.5 2.3 1-5.5-4-4L9 6l3-5z"/></svg> Attention to Detail</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2v2h10V2h2v2h1a2 2 0 012 2v13a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h1V2h2zM4 9v10h16V9H4z"/></svg> Flexible Scheduling</span>
+  </div>
+</section>
+
+<!-- ===================== 5. INTRO (Problem + Solution) ===================== -->
+<section class="intro section">
+  <div class="wrap intro-grid">
+    <div class="intro-copy reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg> Life's busy — let us clean it</span>
+      <h2>Your local cleaning &amp; organizing team in Ocala</h2>
+      <p class="desc">Suds Sisters Cleaning LLC provides professional cleaning and home organization services with a focus on detail, care, and spotless standards every time. Between work, family, and everything in between, keeping up is hard — so we take it off your plate.</p>
+      <p class="pull script">Soul Sisters. Spotless Standards.</p>
+      <a class="btn btn-primary" href="#services" style="margin-top:1.4rem;">
+        See What We Do
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21.8 12l-8.4 6.4L12 17l5-5H5z"/></svg>
+      </a>
+    </div>
+
+    <div class="intro-card reveal">
+      <h3>What we take off your plate</h3>
+      <ul class="sol-list">
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Professional residential &amp; home cleaning</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Office &amp; commercial cleaning</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Airbnb &amp; vacation rental turnovers</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Move-in / move-out &amp; deep cleaning</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Home organization (pantry, kitchen &amp; closet)</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l4 4 10-11" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Recurring weekly, biweekly &amp; monthly cleans</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. SERVICES ===================== -->
+<section class="services section" id="services">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg> Our Services</span>
+      <h2>Cleaning &amp; organizing services in Ocala, FL</h2>
+      <p>From residential and deep cleaning to Airbnb turnovers and home organization — pick what you need and we'll handle the rest.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12h-6v-7H9v7H3z"/></svg></div>
+        <h3>Residential Cleaning</h3>
+        <p>Reliable home cleaning that keeps every room fresh, tidy, and welcoming.</p>
+        <span class="tag">Homes</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2zM6 18l1 3 1-3 3-1-3-1-1-3-1 3-3 1 3 1z"/></svg></div>
+        <h3>Deep Cleaning</h3>
+        <p>Detailed, top-to-bottom resets — baseboards, kitchens, bathrooms, and more.</p>
+        <span class="tag">Reset</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 10l-2-2V4h-3l-2-2-2 2H9l-2 2v.5L3.5 10H2v2h2l1 9h14l1-9h2v-2h-1zM10 19v-5h4v5h-4z"/></svg></div>
+        <h3>Move-In / Move-Out</h3>
+        <p>A spotless start or a clean exit — perfect for moving, selling, or starting fresh.</p>
+        <span class="tag">Moving</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 20h20v2H2v-2zm2-2l5-12 4 7 3-5 4 10H4z"/></svg></div>
+        <h3>Airbnb / Rental Turnovers</h3>
+        <p>Fast, consistent vacation rental turnovers that keep your guests impressed.</p>
+        <span class="tag">Hosts</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21V7l8-4v4l8-3v17H3zm5-3h2v-3H8v3zm0-5h2v-3H8v3zm6 5h2v-3h-2v3zm0-5h2v-3h-2v3z"/></svg></div>
+        <h3>Office / Commercial Cleaning</h3>
+        <p>A clean, professional workspace that reflects well on your business.</p>
+        <span class="tag">Business</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L4 7v3h16V7l-8-5zM3 12v8h2v-6h2v6h2v-6h2v6h2v-6h2v6h2v-6h2v6h0v-8H3z"/></svg></div>
+        <h3>Post-Construction Cleanup</h3>
+        <p>Dust, debris, and detailing cleared away so your finished space truly shines.</p>
+        <span class="tag">Renovation</span>
+      </article>
+
+      <article class="svc org reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 2h14a1 1 0 011 1v18a1 1 0 01-1 1H5a1 1 0 01-1-1V3a1 1 0 011-1zm2 4v4h4V6H7zm6 0v4h4V6h-4zM7 14v4h4v-4H7zm6 0v4h4v-4h-4z"/></svg></div>
+        <h3>Pantry Organization</h3>
+        <p>Decanting, labeling, and product grouping for a pantry that works for you.</p>
+        <span class="tag">Organizing</span>
+      </article>
+
+      <article class="svc org reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 2v3h8V2h2v3h2v17H4V5h2V2h2zm-2 7v2h12V9H6zm0 4v2h8v-2H6z"/></svg></div>
+        <h3>Kitchen Organization</h3>
+        <p>Functional, beautiful kitchen systems that make everyday cooking easier.</p>
+        <span class="tag">Organizing</span>
+      </article>
+
+      <article class="svc org reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a2 2 0 00-1 3.7V7L3 18v2h18v-2l-8-11V5.7A2 2 0 0012 2zm0 9l4 6H8l4-6z"/></svg></div>
+        <h3>Closet Organization</h3>
+        <p>Tidy, sorted closets with smart folding and systems that actually last.</p>
+        <span class="tag">Organizing</span>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2v2h10V2h2v2h1a2 2 0 012 2v13a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h1V2h2zM4 9v10h16V9H4zm3 3l2 2 5-5 1.4 1.4-6.4 6.4L5.6 13.4 7 12z"/></svg></div>
+        <h3>Recurring Cleaning</h3>
+        <p>Weekly, biweekly, or monthly visits to keep your space consistently clean.</p>
+        <span class="tag">Weekly · Biweekly · Monthly</span>
+      </article>
+    </div>
+
+    <div style="text-align:center; margin-top:2.6rem;" class="reveal">
+      <a class="btn btn-navy" href="#contact">
+        Ask About Any Service
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 12h12l-5-5 1.4-1.4L21.8 12l-8.4 6.4L12 17l5-5H5z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. WHY US ===================== -->
+<section class="why section" id="why">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l3 5 5.5.8-4 4 1 5.5L12 19l-5.5 2.3 1-5.5-4-4L9 6l3-5z"/></svg> Why Choose Us</span>
+      <h2>A cleaning service Ocala families &amp; businesses rely on</h2>
+      <p>We're not a faceless franchise. We're a local, family &amp; women owned team that genuinely cares about your space.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.3-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.7-7 10-7 10z"/></svg></div>
+        <div><h3>Family &amp; Women Owned</h3><p>A local business built on pride, trust, and personal care.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5l8-3z"/></svg></div>
+        <div><h3>Insured &amp; Reliable</h3><p>Dependable service and peace of mind on every visit.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l3 5 5.5.8-4 4 1 5.5L12 19l-5.5 2.3 1-5.5-4-4L9 6l3-5z"/></svg></div>
+        <div><h3>Detail-Focused Cleaning</h3><p>The little things matter — and we never skip them.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 11a4 4 0 10-4-4 4 4 0 004 4zm-8 1a3 3 0 10-3-3 3 3 0 003 3zm0 2c-2.7 0-6 1.3-6 4v2h7v-2c0-1 .4-1.9 1-2.7A9 9 0 008 14zm8 0c-3 0-7 1.5-7 4v2h14v-2c0-2.5-4-4-7-4z"/></svg></div>
+        <div><h3>Professional &amp; Caring</h3><p>Friendly service that treats your home like our own.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12h-6v-7H9v7H3z"/></svg></div>
+        <div><h3>Homes, Offices &amp; Rentals</h3><p>Residential, commercial, and Airbnb cleaning from one team.</p></div>
+      </div>
+      <div class="benefit reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg></div>
+        <div><h3>Proudly Serving the Community</h3><p>Local to Ocala, FL &amp; surrounding areas — your neighborhood team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8. HOW IT WORKS ===================== -->
+<section class="how section">
+  <span class="blob" style="width:320px;height:320px;background:var(--rose);top:-100px;right:-80px;opacity:.25;"></span>
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 5h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg> How It Works</span>
+      <h2>Booking your clean is easy</h2>
+      <p>Three simple steps from "I can't keep up" to a fresh, organized space.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Request a quote</h3><p>Call, text, email, or send a message and tell us a little about your space and needs.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Choose your cleaning needs</h3><p>We'll go over services, timing, and any add-ons so the plan fits exactly what you want.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Enjoy a cleaner space</h3><p>Relax and enjoy a spotless, organized home or business — we handle the details.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9. BEFORE / AFTER (interactive slider) ===================== -->
+<section class="beforeafter section">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16v14H4V5zm2 2v10h5V7H6z"/></svg> See the Difference</span>
+      <h2>Before &amp; after: the Suds Sisters touch</h2>
+      <p>Drag the slider to preview the transformation. Swap these in for your own real before-and-after photos.</p>
+    </div>
+
+    <div class="ba-wrap reveal">
+      <div class="ba" id="ba" style="--pos:50%;">
+        <!-- AFTER (clean) -->
+        <div class="ba-pane ba-after">
+          <svg viewBox="0 0 600 375" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder graphic of a clean, bright, organized counter after cleaning.">
+            <defs><linearGradient id="aw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf4f9"/></linearGradient></defs>
+            <rect width="600" height="375" fill="url(#aw)"/>
+            <rect x="0" y="250" width="600" height="125" fill="#f4ece2"/>
+            <rect x="0" y="244" width="600" height="10" fill="#e7dccf"/>
+            <!-- tidy items -->
+            <rect x="70" y="196" width="34" height="54" rx="6" fill="#cfe6ef"/>
+            <path d="M150 196 q18 -10 36 0 v54 h-36 z" fill="#dfeede"/>
+            <rect x="156" y="178" width="24" height="22" rx="4" fill="#bcd9b3"/>
+            <rect x="470" y="170" width="60" height="80" rx="8" fill="#fbdce3"/>
+            <circle cx="500" cy="160" r="10" fill="#8fa07f"/>
+            <!-- sparkles -->
+            <g fill="#e84d82"><path d="M300 70l5 14 14 5-14 5-5 14-5-14-14-5 14-5 5-14z"/><path d="M390 120l4 10 10 4-10 4-4 10-4-10-10-4 10-4 4-10z" fill="#6fbfdc"/><path d="M230 120l3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8z" fill="#f3b740"/></g>
+          </svg>
+        </div>
+        <!-- BEFORE (cluttered) — clipped by --pos -->
+        <div class="ba-pane ba-before">
+          <svg viewBox="0 0 600 375" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder graphic of a cluttered, dull counter before cleaning.">
+            <rect width="600" height="375" fill="#d7cdc2"/>
+            <rect x="0" y="250" width="600" height="125" fill="#b9ac9e"/>
+            <rect x="0" y="244" width="600" height="10" fill="#a89a8c"/>
+            <g fill="#9c8d7f">
+              <rect x="60" y="206" width="40" height="44" rx="4"/>
+              <rect x="120" y="190" width="24" height="60" rx="4" transform="rotate(7 132 220)"/>
+              <circle cx="200" cy="226" r="16"/>
+              <rect x="250" y="200" width="34" height="50" rx="4" transform="rotate(-6 267 225)"/>
+              <rect x="320" y="214" width="48" height="36" rx="4"/>
+              <rect x="430" y="196" width="26" height="54" rx="4" transform="rotate(5 443 223)"/>
+              <circle cx="500" cy="230" r="12"/>
+            </g>
+            <g fill="#8a7c6e" opacity=".7"><circle cx="160" cy="300" r="6"/><circle cx="340" cy="320" r="5"/><circle cx="470" cy="300" r="7"/><circle cx="250" cy="330" r="4"/></g>
+          </svg>
+        </div>
+
+        <span class="ba-label before">Before</span>
+        <span class="ba-label after">After</span>
+        <div class="ba-divider"></div>
+        <div class="ba-handle"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <input class="ba-range" id="baRange" type="range" min="0" max="100" value="50" aria-label="Drag to compare the before and after cleaning images" />
+      </div>
+
+      <div class="ba-center">
+        <p class="ba-hint">Before-and-after photos show the difference a detailed cleaning makes. This slider is ready for your real photos.</p>
+        <span class="ba-note">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+          Placeholder — swap in real Suds Sisters before/after photos.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10. REVIEWS ===================== -->
+<section class="reviews section" id="reviews">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg> Reviews</span>
+      <h2>What clients say about Suds Sisters</h2>
+      <div class="review-banner">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        Example review layout — replace with real customer reviews.
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+        </div>
+        <p>“This is where a happy client's words about their spotless, freshly cleaned home will appear. Add a real review here.”</p>
+        <div class="who"><span class="avatar">A</span><span><b>Customer Name</b><small>Ocala, FL</small></span></div>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+        </div>
+        <p>“Use this card to feature feedback about a move-out clean, Airbnb turnover, or recurring service. Replace with a genuine testimonial.”</p>
+        <div class="who"><span class="avatar">B</span><span><b>Customer Name</b><small>Ocala, FL</small></span></div>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3L21 9.2l-4.7 4.4L17.5 21 12 17.3 6.5 21l1.2-7.4L3 9.2l6.1-.9L12 2z"/></svg>
+        </div>
+        <p>“A great spot for a review about home organization — a tidy pantry, kitchen, or closet. Swap in a real client's words.”</p>
+        <div class="who"><span class="avatar">C</span><span><b>Customer Name</b><small>Ocala, FL</small></span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 11. FAQ ===================== -->
+<section class="faq section" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm.9 15h-1.8v-1.8h1.8V17zm1.4-6.2c-.5.5-1 .8-1.2 1.2-.2.3-.3.6-.3 1.2h-1.6c0-.9.2-1.5.5-2 .3-.4.8-.8 1.2-1.1.4-.4.6-.7.6-1.2 0-.7-.5-1.1-1.3-1.1-.7 0-1.2.4-1.4 1.2l-1.6-.5C8.3 6.9 9.5 6 11.2 6c1.8 0 3 1 3 2.5 0 1-.5 1.7-1 2.3z"/></svg> FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <p>Quick answers about our cleaning and home organization services in Ocala, FL.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What cleaning services do you offer?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">We offer residential cleaning, deep cleaning, move-in / move-out cleaning, Airbnb and vacation rental turnovers, office and commercial cleaning, and post-construction cleanup — plus home organization for pantries, kitchens, and closets.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer home organization?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes! Organization is one of our specialties. We organize pantries, kitchens, and closets to create tidy, functional spaces that are easier to maintain day to day.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you clean Airbnb or vacation rentals?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Absolutely. We handle Airbnb and vacation rental turnovers to keep your property guest-ready. Reach out for an Airbnb quote and we'll tailor a turnover plan to your schedule.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer office or commercial cleaning?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes. We provide office and commercial cleaning to keep your workspace clean, professional, and welcoming for your team and your customers.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Are you insured?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes — Suds Sisters Cleaning LLC is insured and reliable, so you get dependable service and peace of mind with every visit.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do you offer recurring cleanings?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">We do! Choose weekly, biweekly, or monthly recurring cleanings to keep your home or business consistently fresh. Let us know your preferred frequency when you request a quote.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I need to provide cleaning supplies?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Just let us know your preferences when you reach out and we'll go over products and supplies for your space — including eco-friendly options. We'll make sure the plan fits your home and your needs.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How do I request a quote?<span class="chev"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Easy — call or text (616) 606-8213, email sudssisterscleaningllc@gmail.com, message us on Facebook, or fill out the quote form on this page. We'll get back to you to plan your clean.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 12. CONTACT / QUOTE ===================== -->
+<section class="contact section" id="contact">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4l8 5 8-5"/></svg> Get In Touch</span>
+      <h2>Ready for a cleaner, more organized space?</h2>
+      <p>Tell us about your space and we'll put together a free, no-pressure quote.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <h3>Contact Suds Sisters</h3>
+          <p class="sub">Family &amp; women owned, insured, and proudly serving Ocala, FL &amp; surrounding areas.</p>
+
+          <div class="info-row">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg></span>
+            <span class="meta"><small>Call or Text</small><a href="tel:+16166068213">(616) 606-8213</a></span>
+          </div>
+          <div class="info-row">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4v.4l8 4.6 8-4.6V8l-8 4.6L4 8z"/></svg></span>
+            <span class="meta"><small>Email</small><a href="mailto:sudssisterscleaningllc@gmail.com">sudssisterscleaningllc@gmail.com</a></span>
+          </div>
+          <div class="info-row">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11zm0 9a2 2 0 110-4 2 2 0 010 4z"/></svg></span>
+            <span class="meta"><small>Service Area</small><span>Ocala, FL &amp; surrounding areas</span></span>
+          </div>
+          <div class="info-row">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2v2h10V2h2v2h1a2 2 0 012 2v13a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h1V2h2zM4 9v10h16V9H4z"/></svg></span>
+            <span class="meta"><small>Scheduling</small><span>Flexible scheduling available</span></span>
+          </div>
+
+          <div class="social-row">
+            <a href="https://www.facebook.com/search/top?q=Suds%20Sisters%20Cleaning%20LLC" target="_blank" rel="noopener" aria-label="Suds Sisters Cleaning on Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/sudssisterscleaning/" target="_blank" rel="noopener" aria-label="Suds Sisters Cleaning on Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .4 1.4.9.5.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.4 1-.9 1.4-.4.5-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.4-1.4-.9-.5-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.4-1 .9-1.4.4-.5.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.5 2.6 9.9 2.6 13s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zM12 7.1a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8.1a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.1-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote form (preview only — vanilla JS, NOT a real form element; no submission) -->
+      <div class="form-card reveal">
+        <h3>Request a free quote</h3>
+        <p class="form-sub">Fill in a few details and we'll reach out to plan your clean.</p>
+
+        <div id="quoteForm">
+          <div class="field">
+            <label for="qname">Name</label>
+            <input type="text" id="qname" name="name" placeholder="Your name" autocomplete="name" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="qemail">Email</label>
+              <input type="email" id="qemail" name="email" placeholder="you@email.com" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="qphone">Phone</label>
+              <input type="tel" id="qphone" name="phone" placeholder="(000) 000-0000" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="qservice">Service Needed</label>
+            <select id="qservice" name="service">
+              <option value="">Select a service…</option>
+              <option>Residential Cleaning</option>
+              <option>Deep Cleaning</option>
+              <option>Move-In / Move-Out Cleaning</option>
+              <option>Airbnb / Vacation Rental Turnover</option>
+              <option>Office / Commercial Cleaning</option>
+              <option>Post-Construction Cleanup</option>
+              <option>Home Organization (Pantry / Kitchen / Closet)</option>
+              <option>Recurring Cleaning (Weekly / Biweekly / Monthly)</option>
+              <option>Not sure / Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="qmsg">Message</label>
+            <textarea id="qmsg" name="message" placeholder="Tell us about your space, square footage, timing, or anything else…"></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="quoteSubmit">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+            Send My Quote Request
+          </button>
+
+          <div class="form-msg ok" id="formOk" role="status">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M8 12l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Thanks! This is a preview form — on a live site this would send your request to Suds Sisters. For now, please call, text, or email us directly.</span>
+          </div>
+          <div class="form-msg err" id="formErr" role="alert">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            <span>Please add your name and at least one way for us to reach you (phone or email).</span>
+          </div>
+
+          <p class="form-note">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            Preview form only — connect to a booking/contact system later.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 13. FINAL CTA ===================== -->
+<section class="final section">
+  <span class="blob" style="width:300px;height:300px;background:#fff;bottom:-120px;left:-60px;opacity:.18;"></span>
+  <div class="wrap">
+    <h2 class="reveal">Let Suds Sisters Cleaning LLC handle the cleaning, so you can enjoy the space.</h2>
+    <p class="reveal">Family &amp; women owned. Insured &amp; reliable. Proudly serving Ocala, FL.</p>
+    <div class="final-cta reveal">
+      <a class="btn btn-white" href="#contact">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg>
+        Request a Quote
+      </a>
+      <a class="btn btn-outline" href="tel:+16166068213">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>
+        Call Now
+      </a>
+      <a class="btn btn-outline" href="mailto:sudssisterscleaningllc@gmail.com">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4v.4l8 4.6 8-4.6V8l-8 4.6L4 8z"/></svg>
+        Email Us
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== 14. FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="#top" aria-label="Suds Sisters Cleaning LLC — back to top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M9 27c0-6 1.5-11 4-13" stroke="#172a45" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 14c-3-2-6-1.5-8 .5 2.5.5 4 1.5 5 3M13 14c-1-3 .5-6 3-7-.5 2.5 0 4.5 1 6M13 14c3-2 6-1.5 8 .5-2.5.5-4 1.5-5 3" stroke="#e84d82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="24" cy="11" r="3" stroke="#6fbfdc" stroke-width="2"/>
+            </svg>
+          </span>
+          <span class="brand-name"><b>Suds Sisters</b><small>Cleaning LLC</small></span>
+        </a>
+        <p>Professional cleaning and home organization services with a focus on detail, care, and spotless standards every time.</p>
+        <div class="footer-badges">
+          <span>Family &amp; Women Owned</span>
+          <span>Insured &amp; Reliable</span>
+          <span>Proudly Serving the Community</span>
+        </div>
+      </div>
+
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <a href="tel:+16166068213"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg> (616) 606-8213</a>
+          <a href="mailto:sudssisterscleaningllc@gmail.com"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 4v.4l8 4.6 8-4.6V8l-8 4.6L4 8z"/></svg> sudssisterscleaningllc@gmail.com</a>
+          <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg> Ocala, FL &amp; surrounding areas</span>
+          <a href="https://www.facebook.com/search/top?q=Suds%20Sisters%20Cleaning%20LLC" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.5v1.8h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg> Suds Sisters Cleaning LLC</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Suds Sisters Cleaning LLC. All Rights Reserved.</span>
+      <span class="preview-note">Website preview concept.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MOBILE STICKY CALL/QUOTE BAR ===================== -->
+<div class="mobile-cta" aria-label="Quick contact">
+  <a class="btn btn-secondary" href="tel:+16166068213">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>
+    Call
+  </a>
+  <a class="btn btn-primary" href="#contact">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4L12 2z"/></svg>
+    Free Quote
+  </a>
+</div>
+
+<script>
+/* ====================================================================
+   JS — all vanilla, no dependencies
+   ==================================================================== */
+(function () {
+  'use strict';
+
+  /* ---- Mobile nav ---- */
+  var hamburger = document.getElementById('hamburger');
+  var panel = document.getElementById('mobilePanel');
+  function closeMenu() {
+    panel.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+  }
+  hamburger.addEventListener('click', function () {
+    var open = panel.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  document.querySelectorAll('.m-link').forEach(function (l) { l.addEventListener('click', closeMenu); });
+
+  /* ---- Header shadow on scroll ---- */
+  var header = document.querySelector('.site-header');
+  function onScroll() {
+    if (window.scrollY > 12) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---- FAQ accordion (single open) ---- */
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    var ans = item.querySelector('.faq-a');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---- Before/After slider (range drives clip + handle position) ---- */
+  var ba = document.getElementById('ba');
+  var baRange = document.getElementById('baRange');
+  if (ba && baRange) {
+    var setPos = function (v) { ba.style.setProperty('--pos', v + '%'); };
+    baRange.addEventListener('input', function () { setPos(this.value); });
+    setPos(baRange.value);
+  }
+
+  /* ---- Quote form (preview only — no real submission) ---- */
+  var submit = document.getElementById('quoteSubmit');
+  var ok = document.getElementById('formOk');
+  var err = document.getElementById('formErr');
+  if (submit) {
+    submit.addEventListener('click', function () {
+      var name = document.getElementById('qname').value.trim();
+      var email = document.getElementById('qemail').value.trim();
+      var phone = document.getElementById('qphone').value.trim();
+      if (!name || (!email && !phone)) {
+        ok.classList.remove('show');
+        err.classList.add('show');
+        err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      err.classList.remove('show');
+      ok.classList.add('show');
+      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
+  /* ---- Reveal on scroll (progressive enhancement) ---- */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
